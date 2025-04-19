@@ -56,7 +56,11 @@ func TestGetGithubOrg(t *testing.T) {
 		t.Error(err)
 	}
 
-	if name != "nearform" {
+	// The org name is hardcoded in the test
+	// so it should be changed if the repo is moved
+	// to another org
+
+	if name != "gitops-toolbox" {
 		t.Error("Org doesn't match the git repo org")
 	}
 
